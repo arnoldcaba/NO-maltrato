@@ -1,0 +1,252 @@
+<ScrollView
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey"
+    android:orientation="vertical"
+    tools:context="com.infantil.nomaltrato.CrearReporte">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Crear Reporte"
+        style="@style/title"
+        android:id="@+id/textView"/>
+
+    <TextView
+        style="@style/txt_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:layout_below="@+id/textView"
+        android:id="@+id/singout"
+        android:layout_alignParentRight="true"/>
+
+
+    <TextView
+        style="@style/txt_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="usuario actual"
+        android:id="@+id/currentuser"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="5dp"/>
+
+
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        tools:context=".CrearReporte"
+        android:layout_below="@+id/currentuser"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_margin="5dp"/>
+
+
+    <Button
+        android:paddingLeft="10dp"
+        android:layout_marginLeft="20dp"
+        style="@style/btn_buttons_blue"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Capturar Foto"
+        android:id="@+id/btn_obtfoto"
+        android:drawableLeft="@drawable/ic_action_picturecma"
+        android:layout_alignTop="@+id/foto_galeria"
+        android:layout_alignLeft="@+id/txt_detalle"
+        android:layout_alignStart="@+id/txt_detalle" />
+
+
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="170dp"
+        android:id="@+id/imageView"
+        android:layout_alignTop="@+id/map" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:hint="Descripción del hecho"
+        android:id="@+id/txt_detalle"
+        style="@style/txt_edith_view"
+        android:gravity="center_vertical"
+        android:layout_below="@+id/space2" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/descripcion_dir"
+        android:layout_centerVertical="true"
+        android:layout_below="@+id/map"
+        android:hint="Descripción de la dirección"
+        style="@style/txt_edith_view"/>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Autorizo reportar a entes de control"
+        android:id="@+id/checkBox"
+        android:layout_below="@+id/txt_detalle"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/white"/>
+
+    <Button
+        android:paddingRight="20dp"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:text="REPORTAR"
+        android:id="@+id/button3"
+        android:layout_below="@+id/checkBox"
+        android:layout_centerHorizontal="true"
+        style="@style/btn_buttons"
+        android:onClick="reportar"
+        android:drawableRight="@drawable/ic_action_picturech" />
+
+    <Space
+    android:layout_width="match_parent"
+    android:layout_height="20px"
+    android:layout_below="@+id/descripcion_dir"
+    android:id="@+id/space"/>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="30px"
+
+        android:layout_below="@+id/datos_adicionales"
+        android:id="@+id/space2"/>
+
+    <Button
+        android:layout_marginRight="20dp"
+        android:paddingLeft="10dp"
+        style="@style/btn_buttons_blue"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Foto de Galeria"
+        android:id="@+id/foto_galeria"
+        android:layout_below="@+id/space"
+        android:layout_alignRight="@+id/txt_detalle"
+        android:layout_alignEnd="@+id/txt_detalle"
+        android:drawableLeft="@drawable/ic_action_picturegal"
+        android:onClick="pick_photo" />
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20px"
+        android:layout_below="@+id/foto_galeria"
+        android:id="@+id/space3"/>
+    <Button
+        style="@style/title"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:text="Tipos de maltrato (opcional)"
+        android:layout_gravity="center"
+        android:id="@+id/btn_tipo"
+        android:onClick="tipo"
+        android:layout_below="@+id/space3"
+        android:layout_margin="5dp"
+        android:drawableRight="@drawable/ic_action_picturedw" />
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:orientation="vertical"
+           android:id="@+id/ly_opcionales"
+           android:visibility="gone"
+           android:layout_below="@+id/btn_tipo">
+
+           <CheckBox
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:text="Maltrato físico"
+               android:id="@+id/fisico"
+               style="@style/txt_view"/>
+           <CheckBox
+               style="@style/txt_view"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:text="Maltrato emocional o psicológico"
+               android:id="@+id/emocional" />
+           <CheckBox
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:text="Abuso fetal o en embarazo"
+               android:id="@+id/fetal"
+               style="@style/txt_view"/>
+           <CheckBox
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+                   android:text="Abuso sexual"
+               android:id="@+id/sexual"
+               style="@style/txt_view"/>
+           <CheckBox
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:text="Abandono o negligencia"
+               android:id="@+id/abandono"
+               style="@style/txt_view"/>
+       </LinearLayout>
+
+    <Button
+        style="@style/title"
+        android:background="@color/dark_blue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Datos de los involucrados (opcional)"
+        android:onClick="relacion"
+        android:id="@+id/btn_relacion"
+        android:layout_below="@+id/ly_opcionales"
+        android:layout_margin="5dp"
+        android:drawableRight="@drawable/ic_action_picturedw" />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="gone"
+    android:orientation="vertical"
+    android:id="@+id/datos_adicionales"
+    android:layout_below="@+id/btn_relacion">
+    <EditText
+        style="@style/txt_edith_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/nom_victima"
+        android:hint="Nombre de la victima"/>
+    <EditText
+        style="@style/txt_edith_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/nom_agresor"
+        android:hint="Nombre del agresor"/>
+    <TextView
+        style="@style/txt_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Relacion con la victima"
+        android:layout_marginLeft="5dp"/>
+    <Spinner
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/spiner"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@color/white"
+        android:layout_below="@+id/btn_relacion"/>
+
+
+</LinearLayout>
+
+
+
+</RelativeLayout>
+</ScrollView>

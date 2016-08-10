@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/grey">
+    <TextView
+        style="@style/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/registro_usuario"
+        android:id="@+id/header"
+         />
+    <ScrollView
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:background="@color/grey">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        style="@style/main_window">
+
+
+    <TextView
+        style="@style/txt_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lbl_nomusuario"
+        />
+
+    <EditText
+
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:hint="Nombre Apellido"
+        style="@style/txt_edith_view"
+        android:id="@+id/txt_nombre" />
+
+    <TextView
+        style="@style/txt_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lbl_email"/>
+    <EditText
+        style="@style/txt_edith_view"
+        android:layout_height="wrap_content"
+        android:hint="micorreo@correo.com"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/txt_email" />
+
+    <TextView
+        style="@style/txt_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lbl_telefono"/>
+    <EditText
+        style="@style/txt_edith_view"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:hint="celular ó fijo"
+        android:ems="10"
+        android:id="@+id/txt_celular" />
+
+    <TextView
+        style="@style/txt_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lbl_password"/>
+    <EditText
+        style="@style/txt_edith_view"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:hint="de 8 caraceres o más"
+        android:id="@+id/txt_password" />
+
+    <TextView
+        style="@style/txt_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lbl_repassword" />
+    <EditText
+        style="@style/txt_edith_view"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/txt_password2"
+        android:hint="de 8 caraceres o más"/>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="25dp" />
+
+        <Button
+            android:id="@+id/btn_registrarse"
+            style="@style/btn_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/ic_action_pictureadd"
+            android:onClick="registro"
+            android:paddingRight="20dp"
+            android:text="@string/btn_registrarse" />
+
+
+        <TextView
+        style="@style/txt_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lbl_yausuario"
+        android:layout_gravity="center"
+        android:padding="10dp"/>
+
+    <Button
+        android:paddingRight="20dp"
+        style="@style/btn_buttons_blue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_ingresar"
+        android:id="@+id/inicio"
+        android:onClick="inicio"
+        android:drawableRight="@drawable/ic_action_picturelog" />
+
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>

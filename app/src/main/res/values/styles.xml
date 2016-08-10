@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:spinnerDropDownItemStyle">@style/mySpinnerItemStyle</item>
+    </style>
+    <style name="title">
+        <item name="android:background">@color/orange</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:padding">16dp</item>
+    </style>
+
+    <style name="main_window">
+        <item name="android:background">@color/grey</item>
+    </style>
+
+    <style name="txt_edith_view">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@drawable/rounded_edit_text</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="txt_view">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">12dp</item>
+    </style>
+
+    <style name="btn_buttons">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@drawable/rounded_button</item>
+    </style>
+    <style name="btn_buttons_blue">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@drawable/rounded_button_blue</item>
+    </style>
+
+    <style name="mySpinnerItemStyle" parent="@android:style/Widget.Holo.DropDownItem.Spinner">
+        <item name="android:textSize">12dp</item>
+        <item name="android:background">@drawable/rounded_edit_text</item>
+
+    </style>
+</resources>

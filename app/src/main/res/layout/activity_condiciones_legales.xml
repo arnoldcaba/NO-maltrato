@@ -1,0 +1,82 @@
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context="com.infantil.nomaltrato.Condiciones_legales">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CONDICIONES PARA EL ACCESO Y USO DE LA HERRAMIENTA “NO+MALTRATO”"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="
+La aplicación NO+MALTRATO, es una herramienta informática de propiedad de la Universidad de Investigación y Desarrollo UDI que esta última pone al servicio de la comunidad en general, para que a través de dicha herramienta se realicen las respectivas denuncias de los diferentes casos en donde se halle un niño (a) siendo víctima de maltrato infantil en la ciudad de Bucaramanga Santander.
+El fin de la herramienta informática NO+MALTRATO, es facilitarle a cualquier persona un medio para denunciar el maltrato infantil en la ciudad con el propósito de recolectar información para estudio y que se contemple la opción de llevar esta a las autoridades competentes actúen frente a estos casos de acuerdo con sus facultades, y así se contribuya a la erradicación del maltrato infantil. El acceso y uso de la herramienta NO+MALTRATO es totalmente gratuito, y no tiene ningún fin o interés comercial. Los datos que se introduzcan en la herramienta solo tendrán los fines o propósitos que en los presentes términos y condiciones se señalan.
+Cuando acceda o haga uso de la herramienta NO+MALTRATO tenga en cuenta los siguientes términos y condiciones que usted acepta conocer y respetar cada vez que acceda o haga uso de la herramienta NO+MALTRATO:" />
+    <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="1. Al ingresar al sitio NO+MALTRATO, el usuario adquiere el compromiso de suministrar información correcta y verdadera.
+    "/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2. El usuario es el único responsable frente a las autoridades competentes por los hechos que denuncie en la herramienta NO+MALTRATO, así como las fotografías que suba a la herramienta. La UDI trasladará la información a la respectiva autoridad las denuncias que reciba a través de NO+MALTRATO.
+"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3. A la UDI no le consta los hechos denunciados, por tal razón el usuario debe tener presente que puede ser llamado por las autoridades correspondientes con el propósito de ser preguntado por los hechos que pone en conocimiento en NO+MALTRATO.
+"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="4. Una vez trasladadas las denuncias a la autoridad competente, los datos que fueron introducidos en la herramienta NO+MALTRATO serán almacenados por la UDI con todas las medidas de seguridad, y solo se podrán sacar en caso de que la autoridad competente los solicite.
+"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5. La UDI se exime de toda responsabilidad por el uso que le dará la autoridad competente que recibe las denuncias a los datos, imágenes etc. siendo dicha autoridad la que deberá velar y tomar las acciones necesarias tendientes a la protección de la información entregada.
+"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="6. Registro, Tratamiento y Protección de Datos: Los datos de carácter personal que el usuario ingrese en el sitio NO+MALTRATO, son directamente recogidos, tratados y controlados por la UDI, y por tanto la recolección, tratamiento y protección de dichos datos se rige por las políticas de privacidad y protección de datos establecidas por la UDI y la ley.
+"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="7. Al aceptar los presentes términos y condiciones de uso de la herramienta NO+MALTRATO, el usuario está aceptando que sus datos sean recogidos y tratados por la UDI conforme a lo antes expuesto. En caso de que no acepte, deberá abstenerse de hacer uso de la herramienta NO+MALTRATO.
+"/>
+
+
+
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Acepto"
+        android:background="@color/blue"
+        android:layout_gravity="center_horizontal"
+        android:onClick="aceptar"
+        android:layout_margin="10dp"/>
+
+
+
+</LinearLayout>
+
+
+</ScrollView>
